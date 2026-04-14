@@ -1,10 +1,10 @@
 from typing import Optional
 from fastapi import APIRouter, Depends, HTTPException, status, Query
 from sqlalchemy.orm import Session
-from database import get_db
+from backend.database get_db
 from models.user import User
 from schemas.note import NoteCreate, NoteUpdate, NoteOut, SummarizeRequest
-from services import note_service, ai_service
+from backend.services import note_service, ai_service
 from core.dependencies import get_current_user
 
 router = APIRouter(prefix="/notes", tags=["Notes"])
