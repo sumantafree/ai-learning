@@ -1,5 +1,5 @@
 import google.generativeai as genai
-from config import settings
+from backend.config import settings
 
 
 # =========================

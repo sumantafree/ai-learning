@@ -5,9 +5,9 @@ Production Entry: uvicorn main:app --host 0.0.0.0 --port $PORT
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from config import settings
-from database import create_tables
-from routes import auth, tasks, notes, ai
+from backend.config import settings
+from backend.database import create_tables
+from backend.routes import auth, tasks, notes, ai
 
 
 # =========================
