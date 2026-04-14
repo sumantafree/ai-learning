@@ -18,23 +18,20 @@ class Settings(BaseSettings):
     # =========================
     SECRET_KEY: str = "change-this-secret-key-in-production"
     ALGORITHM: str = "HS256"
-    ACCESS_TOKEN_EXPIRE_MINUTES: int = 10080  # 7 days
+    ACCESS_TOKEN_EXPIRE_MINUTES: int = 10080
 
     # =========================
-   # AI Configuration
-   # =========================
-   GEMINI_API_KEY: str
-   GEMINI_MODEL: str = "gemini-1.5-flash"
-
-   OPENAI_API_KEY: Optional[str] = None  # not used
-   OPENAI_MODEL: Optional[str] = None
+    # AI Configuration
+    # =========================
+    GEMINI_API_KEY: str
+    GEMINI_MODEL: str = "gemini-1.5-flash"
 
     # =========================
     # App Config
     # =========================
     APP_NAME: str = "AI Learning System"
-    DEBUG: bool = False  # IMPORTANT: False for production
-    ALLOWED_ORIGINS: str = "*"  # Allow all (safe for API stage)
+    DEBUG: bool = False
+    ALLOWED_ORIGINS: str = "*"
 
     # =========================
     # Derived Properties
@@ -47,10 +44,6 @@ class Settings(BaseSettings):
 
     @property
     def db_url(self) -> str:
-        """
-        Convert postgresql:// to postgresql+psycopg:// for psycopg3 driver
-        (Required for SQLAlchemy + psycopg3)
-        """
         url = self.DATABASE_URL
 
         if not url:
@@ -63,7 +56,4 @@ class Settings(BaseSettings):
         return url
 
 
-# =========================
-# Singleton Settings
-# =========================
 settings = Settings()
