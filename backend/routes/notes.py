@@ -1,7 +1,7 @@
 from typing import Optional
 from fastapi import APIRouter, Depends, HTTPException, status, Query
 from sqlalchemy.orm import Session
-from backend.database get_db
+from backend.database import get_db
 from backend.models.user import User
 from backend.schemas.note import NoteCreate, NoteUpdate, NoteOut, SummarizeRequest
 from backend.services import note_service, ai_service
