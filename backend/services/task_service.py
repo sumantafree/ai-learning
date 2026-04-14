@@ -1,9 +1,9 @@
 from datetime import datetime, timezone
 from typing import Optional
 from sqlalchemy.orm import Session
-from models.task import Task, TaskStatus
-from models.user import User
-from schemas.task import TaskCreate, TaskUpdate
+from backend.models.task import Task, TaskStatus
+from backend.models.user import User
+from backend.schemas.task import TaskCreate, TaskUpdate
 
 
 def create_task(db: Session, owner_id: int, data: TaskCreate) -> Task:

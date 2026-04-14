@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from backend.database import get_db
-from models.user import User
-from schemas.task import TaskOut, GenerateTaskRequest, TaskCreate
+from backend.models.user import User
+from backend.schemas.task import TaskOut, GenerateTaskRequest, TaskCreate
 from backend.services import ai_service, task_service
-from core.dependencies import get_current_user
+from backend.core.dependencies import get_current_user
 from backend.config import settings
 
 

@@ -1,7 +1,7 @@
 from typing import Optional
 from sqlalchemy.orm import Session
-from models.note import Note
-from schemas.note import NoteCreate, NoteUpdate
+from backend.models.note import Note
+from backend.schemas.note import NoteCreate, NoteUpdate
 
 
 def create_note(db: Session, owner_id: int, data: NoteCreate) -> Note:
