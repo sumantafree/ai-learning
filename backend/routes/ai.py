@@ -8,7 +8,7 @@ from backend.core.dependencies import get_current_user
 from backend.config import settings
 
 
-router = APIRouter(prefix="/ai", tags=["AI Mentor"])
+router = APIRouter(tags=["AI Mentor"])
 
 
 # =========================
