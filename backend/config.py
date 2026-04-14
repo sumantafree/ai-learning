@@ -20,7 +20,7 @@ class Settings(BaseSettings):
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 10080  # 7 days
 
-    =========================
+    # =========================
    # AI Configuration
    # =========================
    GEMINI_API_KEY: str
