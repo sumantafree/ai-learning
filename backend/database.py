@@ -27,5 +27,5 @@ def get_db():
 
 def create_tables():
     """Create all tables defined in models."""
-    from models import user, task, note  # noqa: F401 – registers models
+    from backend.models import user, task, note  # noqa: F401 – registers models
     Base.metadata.create_all(bind=engine)
