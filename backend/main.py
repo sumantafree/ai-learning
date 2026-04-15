@@ -8,6 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from backend.config import settings
 from backend.database import create_tables
 from backend.routes import auth, tasks, notes, ai
+from backend.routes import ai_chat
 
 
 # =========================
@@ -53,6 +54,7 @@ app.include_router(auth.router, prefix="/api/auth", tags=["Auth"])
 app.include_router(tasks.router, prefix="/api/tasks", tags=["Tasks"])
 app.include_router(notes.router, prefix="/api/notes", tags=["Notes"])
 app.include_router(ai.router, prefix="/api/ai", tags=["AI"])
+app.include_router(ai_chat.router)
 
 
 # =========================
